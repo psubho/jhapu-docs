@@ -15,6 +15,21 @@ export const docsGroups: Array<{ label: string; pages: DocsPage[] }> = [
     ],
   },
   {
+    label: "Manage",
+    pages: [
+      { title: "Administration", href: "/administration", summary: "Administration guide overview.", keywords: "admin administration overview" },
+      { title: "User Management", href: "/administration/users", summary: "Users, company access and module permissions.", keywords: "user role permission company access password activity log", nested: true },
+      { title: "Company Management", href: "/administration/companies", summary: "Companies, system configuration and account sub-groups.", keywords: "company create configuration account subgroup financial year", nested: true },
+      { title: "Module Management", href: "/administration/modules", summary: "Custom modules and company-level access.", keywords: "custom module permission company module management", nested: true },
+    ],
+  },
+  {
+    label: "Customise",
+    pages: [
+      { title: "Module Builder", href: "/module-builder", summary: "Design and generate custom modules.", keywords: "module builder ai draft form generate tenant" },
+    ],
+  },
+  {
     label: "Use Jhapu ERP",
     pages: [
       { title: "ERP Basics", href: "/erp-basics", summary: "Company Home and ERP menu areas.", keywords: "company home masters accounting inventory reports company specific" },
@@ -26,25 +41,15 @@ export const docsGroups: Array<{ label: string; pages: DocsPage[] }> = [
     ],
   },
   {
-    label: "Customise",
-    pages: [
-      { title: "Module Builder", href: "/module-builder", summary: "Design and generate custom modules.", keywords: "module builder ai draft form generate tenant" },
-    ],
-  },
-  {
-    label: "Manage",
-    pages: [
-      { title: "Administration", href: "/administration", summary: "Administration guide overview.", keywords: "admin administration overview" },
-      { title: "User Management", href: "/administration/users", summary: "Users, company access and module permissions.", keywords: "user role permission company access password activity log", nested: true },
-      { title: "Company Management", href: "/administration/companies", summary: "Companies, system configuration and account sub-groups.", keywords: "company create configuration account subgroup financial year", nested: true },
-      { title: "Module Management", href: "/administration/modules", summary: "Custom modules and company-level access.", keywords: "custom module permission company module management", nested: true },
-      { title: "Troubleshooting", href: "/troubleshooting", summary: "Resolve common issues safely.", keywords: "problem login api health cache support" },
-    ],
-  },
-  {
     label: "What’s new",
     pages: [
       { title: "Release notes", href: "/release-notes", summary: "Documentation and product updates.", keywords: "release update change new" },
+    ],
+  },
+  {
+    label: "Support",
+    pages: [
+      { title: "Troubleshooting", href: "/troubleshooting", summary: "Resolve common issues safely.", keywords: "problem login api health cache support" },
     ],
   },
 ];
