@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { DocArticle } from "../components/DocArticle";
 
 export const metadata: Metadata = { title: "Administration" };
@@ -9,33 +10,32 @@ export default function AdministrationPage() {
       activePath="/administration"
       category="Manage"
       title="Administer your organisation"
-      description="Keep company context, user access and configuration accurate without exposing sensitive platform information."
+      description="Use these focused administrator guides to keep companies, user access and custom modules correctly managed."
       next={{ title: "Troubleshooting", href: "/troubleshooting" }}
     >
       <section>
-        <h2>Companies and financial years</h2>
-        <p>Companies represent the organisation, head office or branches inside one tenant. Verify the active company and financial year before importing, posting or reporting data.</p>
-      </section>
-      <section>
-        <h2>Users, roles and module access</h2>
-        <ul>
-          <li>Create an individual account for each person; do not share passwords.</li>
-          <li>Grant only the modules and actions needed for that person’s work.</li>
-          <li>Review access when responsibilities change or a user leaves.</li>
-          <li>Use Change Password immediately if credentials may have been exposed.</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Configuration discipline</h2>
-        <div className="three-column">
-          <div><span>Before change</span><strong>Understand impact</strong><p>Identify affected companies, users, transactions and reports.</p></div>
-          <div><span>During change</span><strong>Keep scope narrow</strong><p>Change one setting at a time and record the reason.</p></div>
-          <div><span>After change</span><strong>Verify behaviour</strong><p>Test with the intended role and review resulting reports.</p></div>
+        <h2>Choose an administrator task</h2>
+        <p>Each guide is intentionally short and focused, so an ERP help link can send an administrator directly to the relevant task.</p>
+        <div className="admin-guide-grid">
+          <Link href="/administration/users">
+            <span>User Management</span>
+            <strong>Users, company access and permissions</strong>
+            <p>Create user accounts, grant access to companies, and manage module-level Create, Edit, Delete and View permissions.</p>
+            <em>Open User Management →</em>
+          </Link>
+          <Link href="/administration/companies">
+            <span>Company Management</span>
+            <strong>Companies and configuration</strong>
+            <p>Create or maintain companies, manage system configuration, and keep account sub-groups organised.</p>
+            <em>Open Company Management →</em>
+          </Link>
+          <Link href="/administration/modules">
+            <span>Module Management</span>
+            <strong>Custom modules and access</strong>
+            <p>Build tenant-specific modules and understand how they are made available through company-level permissions.</p>
+            <em>Open Module Management →</em>
+          </Link>
         </div>
-      </section>
-      <section>
-        <h2>Sensitive information</h2>
-        <p>Database passwords, API secrets, SMTP credentials, GST provider credentials and signing keys must never be placed in screenshots, support messages or ordinary application logs.</p>
       </section>
     </DocArticle>
   );

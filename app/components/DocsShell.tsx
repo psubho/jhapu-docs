@@ -67,7 +67,7 @@ export function DocsShell({ activePath, children }: { activePath: string; childr
                 <Link
                   href={page.href}
                   key={page.href}
-                  className={activePath === page.href ? "active" : ""}
+                  className={`${page.nested ? "nested" : ""} ${activePath === page.href ? "active" : ""}`.trim()}
                   onClick={() => setMenuOpen(false)}
                 >
                   {page.title}

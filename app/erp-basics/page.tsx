@@ -1,44 +1,37 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { DocArticle } from "../components/DocArticle";
 
-export const metadata: Metadata = { title: "ERP basics" };
+export const metadata: Metadata = { title: "ERP Basics" };
 
 export default function ErpBasicsPage() {
   return (
     <DocArticle
       activePath="/erp-basics"
       category="Use Jhapu ERP"
-      title="The core ERP workflow"
-      description="Jhapu follows a dependable sequence: prepare masters, record transactions, then verify the result through reports."
+      title="ERP Basics"
+      description="After selecting a company, use the Company Home menu to work with the built-in ERP areas and your company-specific modules."
       next={{ title: "Module Builder", href: "/module-builder" }}
     >
       <section>
-        <h2>1. Masters define reusable information</h2>
-        <p>Create records once and select them in transactions. Core masters include Ledgers, Items, Units, Categories, Stores, GST rates, HSN/SAC, Cost Centres and TDS sections.</p>
-        <div className="three-column">
-          <div><span>Accounts</span><strong>Ledgers and groups</strong><p>Define who you transact with and how values are classified.</p></div>
-          <div><span>Inventory</span><strong>Items and stores</strong><p>Define what you buy, sell, move and value.</p></div>
-          <div><span>Tax</span><strong>GST and TDS</strong><p>Define statutory rates and classifications used by transactions.</p></div>
+        <h2>Company Home</h2>
+        <p>After selecting a company, the user lands on Company Home. This is the starting point for day-to-day ERP work in the selected company.</p>
+        <figure className="doc-screenshot">
+          <img src="/screenshots/company-home.png" alt="Example Jhapu Company Home page after company selection" />
+          <figcaption>Example only: Company Home displays the selected company and its available ERP menu areas.</figcaption>
+        </figure>
+        <div className="callout"><strong>Built-in and custom modules</strong><p>Masters, Accounting, Inventory and Reports are built-in ERP areas. When custom modules are added for a company, they appear under <strong>Company Specific</strong>.</p></div>
+      </section>
+      <section>
+        <h2>Choose an ERP area</h2>
+        <p>Use these category guides as the starting point. Each category will contain focused pages for its individual ERP screens and workflows.</p>
+        <div className="admin-guide-grid">
+          <Link href="/erp-basics/masters"><span>Built-in ERP</span><strong>Masters</strong><p>Maintain the reusable account, inventory and statutory information used by transactions.</p><em>Open Masters →</em></Link>
+          <Link href="/erp-basics/accounting"><span>Built-in ERP</span><strong>Accounting</strong><p>Record financial vouchers and manage the accounting workflow for the selected company.</p><em>Open Accounting →</em></Link>
+          <Link href="/erp-basics/inventory"><span>Built-in ERP</span><strong>Inventory</strong><p>Manage item movement, stock-related documents and inventory operations.</p><em>Open Inventory →</em></Link>
+          <Link href="/erp-basics/company-specific"><span>Custom ERP</span><strong>Company Specific</strong><p>Access the custom modules that have been created and enabled for the company.</p><em>Open Company Specific →</em></Link>
+          <Link href="/erp-basics/reports"><span>Built-in ERP</span><strong>Reports</strong><p>Review financial, inventory and statutory reports for the selected company.</p><em>Open Reports →</em></Link>
         </div>
-      </section>
-      <section>
-        <h2>2. Transactions create business activity</h2>
-        <p>Sales, purchases, returns, orders, GRNs, stock movements and financial vouchers use your masters. Save transactions only in the intended company and financial year.</p>
-        <div className="callout"><strong>Accounting and stock stay connected</strong><p>Where configured, Jhapu posts voucher and stock effects as part of the same transaction. If posting fails, the business document should not be partially saved.</p></div>
-      </section>
-      <section>
-        <h2>3. Reports verify the result</h2>
-        <p>Use Ledger, Day Book, Trial Balance, Profit &amp; Loss, Balance Sheet, stock reports, registers, GST and TDS reports to confirm entries. Filter by the correct dates, company and other available dimensions before comparing totals.</p>
-      </section>
-      <section>
-        <h2>A simple daily control routine</h2>
-        <ol>
-          <li>Review unposted or incomplete work.</li>
-          <li>Verify voucher totals and stock quantities.</li>
-          <li>Check Day Book and relevant registers.</li>
-          <li>Review bank clearing and reconciliation.</li>
-          <li>Investigate exceptions before closing the period.</li>
-        </ol>
       </section>
     </DocArticle>
   );
