@@ -46,7 +46,7 @@ export function DocsShell({ activePath, children }: { activePath: string; childr
             </div>
           )}
         </div>
-        <a className="erp-link" href="http://localhost:5174" target="_blank" rel="noreferrer">Open ERP <span>↗</span></a>
+        <a className="erp-link" href="https://erp.jhapu.com" target="_blank" rel="noreferrer">Open ERP <span>↗</span></a>
         <button
           className="menu-button"
           type="button"

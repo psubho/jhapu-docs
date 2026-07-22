@@ -21,6 +21,14 @@ Create a production build with:
 npm run build
 ```
 
+Create the static export deployed to AWS S3 and CloudFront with:
+
+```bash
+npm run build:aws
+```
+
+The AWS-ready files are written to `out/`.
+
 ## Writing documentation
 
 - Keep instructions task-oriented and use the same labels users see in Jhapu.
