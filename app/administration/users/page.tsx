@@ -69,6 +69,29 @@ export default function UserManagementPage() {
         </figure>
         <div className="callout important"><strong>When to select a company</strong><p>Company selection is optional for the core built-in modules. If no company is selected, Jhapu shows those core modules. Select a company when managing permissions for custom modules created for that company.</p></div>
       </section>
+      <section>
+        <h2>User Access Report</h2>
+        <p>Use the User Access Report to review a user’s effective module permissions for the selected company context. It provides a clear matrix of Create, Edit, Delete and View rights across the available modules.</p>
+        <figure className="doc-screenshot">
+          <img src="/screenshots/user-access-report.png" alt="Example Jhapu User Access Report showing module-level Create, Edit, Delete and View permissions" />
+          <figcaption>Example only: the access report provides an at-a-glance view of a user’s module permissions.</figcaption>
+        </figure>
+        <div className="callout"><strong>Review before assigning responsibility</strong><p>Use this report to confirm that the user has only the permissions required for their role, particularly before enabling access to sensitive accounting or administration modules.</p></div>
+      </section>
+      <section>
+        <h2>User Ledger Access</h2>
+        <p>User Ledger Access controls which main ledgers and sub-ledgers a user may work with in a selected company. Administrators can grant access to every ledger or choose individual ledger records.</p>
+        <figure className="doc-screenshot">
+          <img src="/screenshots/user-ledger-access.png" alt="Example Jhapu User Ledger Access page with main and sub-ledger selection panels" />
+          <figcaption>Example only: choose all ledgers or select the main and sub-ledgers available to a user.</figcaption>
+        </figure>
+        <ul>
+          <li><strong>Give access to all ledgers:</strong> enable this option when the user should have access to every available ledger.</li>
+          <li><strong>Main Ledgers and Sub Ledgers:</strong> use the individual checkboxes or Select All controls for a more limited assignment.</li>
+          <li><strong>Search ledgers:</strong> quickly locate a ledger in a larger chart of accounts.</li>
+          <li><strong>Save Ledger Access:</strong> save the selected access after review.</li>
+        </ul>
+      </section>
     </DocArticle>
   );
 }

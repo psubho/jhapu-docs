@@ -33,6 +33,19 @@ export default function ModuleManagementPage() {
         </ul>
       </section>
       <section>
+        <h2>Extend Item and Account masters</h2>
+        <p>Master Extensions lets an administrator add tenant-level custom fields to the built-in Item and Account masters. The configured fields are available across the tenant’s companies.</p>
+        <figure className="doc-screenshot">
+          <img src="/screenshots/master-extensions.png" alt="Jhapu Master Extensions page showing custom Item fields and the New Item field form" />
+          <figcaption>Create, review and deploy custom fields for the Item or Account master.</figcaption>
+        </figure>
+        <ul>
+          <li><strong>Item and Account:</strong> switch between the two built-in master types to manage their extension fields.</li>
+          <li><strong>New field:</strong> define the field key, label, field type and section for a new custom field.</li>
+          <li><strong>Deployment:</strong> saving deploys the field immediately, making it ready for use in the selected master.</li>
+        </ul>
+      </section>
+      <section>
         <h2>Build and publish carefully</h2>
         <ol className="steps">
           <li><span>01</span><div><strong>Define the requirement</strong><p>Decide what business information the module should capture and which company needs it.</p></div></li>

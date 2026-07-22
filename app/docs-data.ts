@@ -4,6 +4,7 @@ export type DocsPage = {
   summary: string;
   keywords: string;
   nested?: boolean;
+  deeper?: boolean;
 };
 
 export const docsGroups: Array<{ label: string; pages: DocsPage[] }> = [
@@ -34,7 +35,12 @@ export const docsGroups: Array<{ label: string; pages: DocsPage[] }> = [
     pages: [
       { title: "ERP Basics", href: "/erp-basics", summary: "Company Home and ERP menu areas.", keywords: "company home masters accounting inventory reports company specific" },
       { title: "Masters", href: "/erp-basics/masters", summary: "Reusable accounts, inventory and statutory information.", keywords: "masters ledger item unit category store GST HSN cost centre", nested: true },
+      { title: "Item", href: "/erp-basics/masters/items", summary: "Create items with classification, tax and optional tenant fields.", keywords: "item master category subcategory unit rate HSN GST EAN", nested: true, deeper: true },
+      { title: "Main Ledger", href: "/erp-basics/masters/main-ledgers", summary: "Create account-ledger definitions with contact and tax details.", keywords: "main ledger account group subgroup PAN GST opening balance", nested: true, deeper: true },
+      { title: "Sub Ledger", href: "/erp-basics/masters/sub-ledgers", summary: "Create sub-ledgers beneath a main ledger and configure bill-wise selection.", keywords: "sub ledger mother account main ledger relate to bill sale purchase add less", nested: true, deeper: true },
+      { title: "GST State", href: "/erp-basics/masters/gst-states", summary: "Manage GST state names and their statutory GST codes.", keywords: "GST state state name GST code statutory master", nested: true, deeper: true },
       { title: "Accounting", href: "/erp-basics/accounting", summary: "Financial vouchers and accounting workflows.", keywords: "accounting voucher ledger bank financial", nested: true },
+      { title: "Voucher", href: "/erp-basics/accounting/cash-receipts", summary: "Create, view and print receipt and journal vouchers.", keywords: "voucher CRV BRV cash receipt bank receipt journal print", nested: true, deeper: true },
       { title: "Inventory", href: "/erp-basics/inventory", summary: "Stock-related documents and operations.", keywords: "inventory stock item movement purchase sale", nested: true },
       { title: "Company Specific", href: "/erp-basics/company-specific", summary: "Custom modules for the selected company.", keywords: "company specific custom module tenant", nested: true },
       { title: "Reports", href: "/erp-basics/reports", summary: "Financial, inventory and statutory reports.", keywords: "reports day book trial balance profit loss balance sheet GST", nested: true },
