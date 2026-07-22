@@ -28,6 +28,7 @@ export const docsGroups: Array<{ label: string; pages: DocsPage[] }> = [
     label: "Customise",
     pages: [
       { title: "Module Builder", href: "/module-builder", summary: "Design and generate custom modules.", keywords: "module builder ai draft form generate tenant" },
+      { title: "Post-Save Actions", href: "/post-save-actions", summary: "Send email or call an API after a record is saved.", keywords: "post save lifecycle action email Amazon SES API SMS WhatsApp automation delivery history", nested: true },
     ],
   },
   {

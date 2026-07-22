@@ -227,6 +227,7 @@ button, input { font: inherit; }
 .article-body ul, .article-body ol { margin: 12px 0 0; padding-left: 22px; color: #a3aab8; font-size: 14px; line-height: 1.75; }
 .article-body li { padding: 4px 0 4px 6px; }
 .article-body li::marker { color: #7e5bf0; }
+.article-body code { padding: 2px 5px; border: 1px solid rgba(124, 92, 255, .2); border-radius: 4px; background: rgba(124, 92, 255, .1); color: #c5b8ff; font: 500 .88em var(--font-geist-mono), monospace; }
 .callout { margin-top: 26px; padding: 21px 23px; border: 1px solid rgba(78, 111, 218, .25); border-left: 3px solid #4385f6; border-radius: 4px; background: rgba(33, 72, 155, .07); }
 .callout.important { border-color: rgba(128, 81, 230, .28); border-left-color: #8054ed; background: rgba(95, 48, 181, .08); }
 .callout strong { display: block; margin-bottom: 7px; font-size: 13px; }

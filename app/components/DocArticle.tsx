@@ -23,7 +23,7 @@ export function DocArticle({
           <p className="article-category">{category}</p>
           <h1>{title}</h1>
           <p>{description}</p>
-          <div className="article-meta"><span>Jhapu Documentation</span><span>Updated 21 July 2026</span></div>
+          <div className="article-meta"><span>Jhapu Documentation</span><span>Updated 22 July 2026</span></div>
         </header>
         <div className="article-body">{children}</div>
         {next && (

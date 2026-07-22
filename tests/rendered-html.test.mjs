@@ -26,10 +26,19 @@ test("server-renders the documentation home", async () => {
 });
 
 test("server-renders an article route", async () => {
-  const response = await render("/getting-started");
+  const response = await render("/getting-started/");
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /Getting started with Jhapu/);
   assert.match(html, /Before you sign in/);
   assert.match(html, /Tenant Code/);
+});
+
+test("server-renders the Post-Save Actions guide", async () => {
+  const response = await render("/post-save-actions/");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Post-Save Actions/);
+  assert.match(html, /Amazon SES email/);
+  assert.match(html, /X-Jhapu-Idempotency-Key/);
 });
