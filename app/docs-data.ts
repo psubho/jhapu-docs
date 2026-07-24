@@ -43,6 +43,7 @@ export const docsGroups: Array<{ label: string; pages: DocsPage[] }> = [
       { title: "Accounting", href: "/erp-basics/accounting", summary: "Financial vouchers and accounting workflows.", keywords: "accounting voucher ledger bank financial", nested: true },
       { title: "Voucher", href: "/erp-basics/accounting/cash-receipts", summary: "Create, view and print receipt and journal vouchers.", keywords: "voucher CRV BRV cash receipt bank receipt journal print", nested: true, deeper: true },
       { title: "Inventory", href: "/erp-basics/inventory", summary: "Stock-related documents and operations.", keywords: "inventory stock item movement purchase sale", nested: true },
+      { title: "Manage Stores", href: "/erp-basics/inventory/stores", summary: "Create and maintain stores and their inventory ledger configuration.", keywords: "store inventory main ledger sub ledger opposite account", nested: true, deeper: true },
       { title: "Company Specific", href: "/erp-basics/company-specific", summary: "Custom modules for the selected company.", keywords: "company specific custom module tenant", nested: true },
       { title: "Reports", href: "/erp-basics/reports", summary: "Financial, inventory and statutory reports.", keywords: "reports day book trial balance profit loss balance sheet GST", nested: true },
     ],
