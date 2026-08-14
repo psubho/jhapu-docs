@@ -69,36 +69,8 @@ jobs:
       - name: Build AWS static export
         run: npm run build:aws
 
-      - name: Inspect GitHub OIDC claims
-        shell: bash
-        run: |
-          node <<'NODE'
-          const response = await fetch(
-            `${process.env.ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sts.amazonaws.com`,
-            {
-              headers: {
-                Authorization: `Bearer ${process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN}`,
-              },
-            },
-          );
-          if (!response.ok) {
-            throw new Error(`Unable to request GitHub OIDC token: ${response.status}`);
-          }
-          const { value } = await response.json();
-          const claims = JSON.parse(
-            Buffer.from(value.split('.')[1], 'base64url').toString('utf8'),
-          );
-          console.log(JSON.stringify({
-            iss: claims.iss,
-            aud: claims.aud,
-            sub: claims.sub,
-            repository: claims.repository,
-            ref: claims.ref,
-          }, null, 2));
-          NODE
-
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@61815dcd50bd041e203e49132bacad1fd04d2708 # v5.1.1
+        uses: aws-actions/configure-aws-credentials@e6de054238d6b7531b4efff3b6587d9aade6a06c # v6.2.3
         with:
           role-to-assume: arn:aws:iam::931996386755:role/JhapuDocsGitHubDeploy
           role-session-name: jhapu-docs-${{ github.run_id }}
